@@ -4,8 +4,8 @@
 
 ### Docker File Steps
 
-1. Create file called "Dockerfile" and add the following lines, be sure to change version to a number i.e: 10.12.0
-Use node -v to find version
+__1. Create file called "Dockerfile" and add the following lines, be sure to change version to a number i.e: 10.12.0
+Use node -v to find version__
 
 ```
 FROM node:version
@@ -22,7 +22,7 @@ CMD npm start
 EXPOSE 3000
 ```
 
-2. Create .dockerignore file and add in the following lines
+__2. Create .dockerignore file and add in the following lines__
 
 ```sh
 
