@@ -71,7 +71,7 @@ __3. Create EB Environment__
 eb create
 
 Select default -> Select Name
-
+```
 __4. Deploy EB__
 ```sh
 
