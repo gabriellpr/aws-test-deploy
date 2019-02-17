@@ -1,5 +1,13 @@
 # Professional Portfolio
+
+### About
+
+This repository is a template that anyone can use for a professional portfolio. Just leave me credits.
+
+### Example Screenshot
 ![Screenshot](https://github.com/ryanlb777/Professional-Portfolio/blob/master/src/images/Capture.PNG)
+
+
 
 # How to Dockerize a React App
 
