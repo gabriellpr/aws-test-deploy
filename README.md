@@ -34,48 +34,53 @@ npm-debug.log
 
 ### Docker Build Steps
 
+__1. Build docker first__
 
 ```sh
-1. Build docker first
-
 docker build -t docker-name .
+```
+__2. Run docker to test.__
 
-2. Run docker to test.
-
+```sh
 docker run -p 8081:3000 professional-portfolio
-
 ```
 
 ### Elastic Beanstalk Steps
 
+__1. Commit changes to git__
 ```sh
-1. Commit changes to git
+
 
 git add .
 
 git commit -m "Eb Deploy Settings"
 
 git push
+```
 
-2. Initialize EB
+__2. Initialize EB__
+```sh
 
 eb init 
 
 Select default -> Create new application -> Enter application name -> Setup ssh
-
-3. Create EB Environment
+```
+__3. Create EB Environment__
+```sh
 
 eb create
 
 Select default -> Select Name
 
-4. Deploy EB
+__4. Deploy EB__
+```sh
 
 eb use environment name
 
 eb deploy
-
-5. Confirm EB is deployed
+```
+__5. Confirm EB is deployed__
+```sh
 
 eb open
 
