@@ -1,5 +1,37 @@
 # Professional Portfolio
 
+# How to Dockerize a React App
+
+### Docker File Steps
+
+1. Create file called "Dockerfile" and add the following lines, be sure to change version to a number i.e: 10.12.0
+Use node -v to find version
+
+```
+FROM node:version
+container .
+
+WORKDIR /app
+
+COPY . /app
+
+RUN npm install
+
+CMD npm start
+
+EXPOSE 3000
+```
+
+2. Create .dockerignore file and add in the following lines
+
+```sh
+
+node_modules
+npm-debug.log
+
+```
+
+
 ### Docker Build Steps
 
 
