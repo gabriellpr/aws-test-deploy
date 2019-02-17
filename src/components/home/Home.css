@@ -6,14 +6,16 @@
 .home-container {
     margin: 0 auto;
     padding: 1.5em;
+    text-align:center;
     /* background:#3d70b2; */
 }
 
 .header-image {
-    width: 5em;
-    height: 5em;
+    width: 10em;
+    height: 10em;
     border-radius:8px;
 }
+
 .body-image{
     margin: 0 auto;
     margin-top: 2em;
@@ -29,14 +31,15 @@
     grid-template-columns: auto auto auto;
     padding: 1px;
 }
+
 .grid-container-two {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1px;
     margin-top:1em;
 }
+
 .grid-item {
-    font-size: 30px;
     text-align: center;
     object-fit: cover;
     overflow: hidden;

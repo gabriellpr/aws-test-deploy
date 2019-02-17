@@ -5,7 +5,10 @@ import background from '../../images/background.jpg'
 import profile from '../../images/profile_picture.png'
 
 class Home extends Component {
+  
   render() {
+     const projects = [1, 2, 3, 4,5,6];
+
     return (
       <div className="home-container">
     
@@ -32,11 +35,14 @@ class Home extends Component {
           alt="img"
           src={background}
         />
-     
-        <div className="grid-container-two">
-          <div className="grid-item">1</div>
-          <div className="grid-item">2</div>
-          <div className="grid-item">3</div>
+        <h2>Projects</h2>
+        <hr/>
+        <div className="grid-container-two"> 
+        {
+          projects.map(i => {
+            return  <div key={i} className="grid-item"> {i} </div>
+          })
+        }
         </div>
       </div>
     );

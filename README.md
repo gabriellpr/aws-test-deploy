@@ -1,68 +1,87 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Professional Portfolio
 
-## Available Scripts
+# How to Dockerize a React App
 
-In the project directory, you can run:
+### Docker File Steps
 
-### `npm start`
+__1. Create file called "Dockerfile" and add the following lines, be sure to change version to a number i.e: 10.12.0
+Use node -v to find version__
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+FROM node:version
+container .
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+WORKDIR /app
 
-### `npm test`
+COPY . /app
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+RUN npm install
 
-### `npm run build`
+CMD npm start
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+EXPOSE 3000
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+__2. Create .dockerignore file and add in the following lines__
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
 
-### `npm run eject`
+node_modules
+npm-debug.log
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Docker Build Steps
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+__1. Build docker first__
 
-## Learn More
+```sh
+docker build -t docker-name .
+```
+__2. Run docker to test.__
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+docker run -p 8081:3000 professional-portfolio
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Elastic Beanstalk Steps
 
-### Code Splitting
+__1. Commit changes to git__
+```sh
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+git add .
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+git commit -m "Eb Deploy Settings"
 
-### Making a Progressive Web App
+git push
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+__2. Initialize EB__
+```sh
 
-### Advanced Configuration
+eb init 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Select default -> Create new application -> Enter application name -> Setup ssh
+```
+__3. Create EB Environment__
+```sh
 
-### Deployment
+eb create
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Select default -> Select Name
+```
+__4. Deploy EB__
+```sh
 
-### `npm run build` fails to minify
+eb use environment name
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+eb deploy
+```
+__5. Confirm EB is deployed__
+```sh
+
+eb open
+
+```
