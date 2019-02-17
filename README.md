@@ -8,7 +8,7 @@
 
 docker build -t docker-name .
 
-1. Run docker to test.
+2. Run docker to test.
 
 docker run -p 8081:3000 professional-portfolio
 
@@ -25,25 +25,25 @@ git commit -m "Eb Deploy Settings"
 
 git push
 
-1. Initialize EB
+2. Initialize EB
 
 eb init 
 
 Select default -> Create new application -> Enter application name -> Setup ssh
 
-1. Create EB Environment
+3. Create EB Environment
 
 eb create
 
 Select default -> Select Name
 
-1. Deploy EB
+4. Deploy EB
 
 eb use environment name
 
 eb deploy
 
-1. Confirm EB is deployed
+5. Confirm EB is deployed
 
 eb open
 
