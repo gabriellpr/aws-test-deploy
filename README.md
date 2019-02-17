@@ -1,4 +1,5 @@
 # Professional Portfolio
+![Screenshot](https://github.com/ryanlb777/Professional-Portfolio/blob/master/src/images/Capture.PNG)
 
 # How to Dockerize a React App
 
