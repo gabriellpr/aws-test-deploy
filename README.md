@@ -2,7 +2,21 @@
 
 ### About
 
-This repository is a template that anyone can use for a professional portfolio. Just leave me credits.
+This repository is a template that anyone can use for a professional portfolio. Just leave me credits. Created in ReactJS with reactstrap and custom functionality.
+
+### Installation
+
+```sh
+
+git clone repo
+
+cd repo
+
+npm install
+
+npm start
+
+```
 
 ### Example Screenshot
 ![Screenshot](https://github.com/ryanlb777/Professional-Portfolio/blob/master/src/images/Capture.PNG)
