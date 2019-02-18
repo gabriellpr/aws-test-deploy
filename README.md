@@ -2,7 +2,7 @@
 
 ### About
 
-This repository is a template that anyone can use for a professional portfolio. Just leave me credits. Created in ReactJS with reactstrap and custom functionality.
+This repository is a template that anyone can use for a professional portfolio. Created in ReactJS with reactstrap and custom functionality.
 
 ### Installation
 
